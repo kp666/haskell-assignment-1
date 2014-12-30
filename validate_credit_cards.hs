@@ -2,8 +2,8 @@ import Data.Char (digitToInt)
 
 toIntegerArray :: Integer ->[Int]
 toIntegerArray(n)
-| n < 0 =[]
-| otherwise = map digitToInt(show(n))
+  | n < 0 =[]
+  | otherwise = map digitToInt(show(n))
 
 toIntegerArrayReverse :: Integer -> [Int]
 toIntegerArrayReverse  n  = reverse $ toIntegerArray $ n
@@ -27,8 +27,8 @@ sumDigits(n)  = (mod n 10 ) + sumDigits(div n 10)
 
 validate :: Integer -> String
 validate n
-|( sumDigitsArray $ doubleEveryOther $ toIntegerArrayReverse $ n) `mod` 10 == 0 = "valid"
-| otherwise = "invalid"
+  |( sumDigitsArray $ doubleEveryOther $ toIntegerArrayReverse $ n) `mod` 10 == 0 = "valid"
+  | otherwise = "invalid"
 
 main = do
   putStrLn "Enter credit card number"
