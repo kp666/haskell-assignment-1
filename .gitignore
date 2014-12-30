@@ -1,3 +1,4 @@
-validate_credit_cards
+*
+!*.hs
 *.hi
 *.o
